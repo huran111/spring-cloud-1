@@ -1,0 +1,28 @@
+server:
+  port: 8085 #服务端口
+spring:
+  application:
+    name: hr-api-gateway
+zuul:
+  routes:
+     item-server: #这个名字是任意写的
+       path: /item-server/**
+       #url: http://127.0.0.1:8081
+       serviceId: HR-ITEM
+     item-order:
+       path: /item-order/**
+       serviceId: HR-ORDER
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://huran:111111@127.0.0.1:8080/eureka/
+  instance:
+    hostname: 192.168.10.30
+    instance-id: hr-api-gateway
+    prefer-ip-address: true
+ribbon:
+  eureka:
+    enabled: true
