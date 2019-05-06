@@ -1,2 +1,34 @@
 server:
-  port: 8081
+  port: 8082
+hr:
+  item:
+    url: http://localhost:8080/item/queryItemById/
+spring:
+  application:
+    name: hr-order
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true #该参数用来开启重试机制
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://huran:111111@127.0.0.1:8080/eureka/
+  instance:
+    prefer-ip-address: true #将自己的真是Ip注册到服务中
+    ip-address: 192.168.10.30
+    instance-id: hr-order
+    hostname: 192.168.10.30
+hr-order:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #需要@Bean先注入
+    ConnectTimeout: 500 #请求连接超时时间
+    ReadTimeout: 1000  #请求处理的超时时间
+    OkToRetryOnAllOperations: true #对所有请求都进行重试
+    MaxAutoRetriesNextServer: 2 #切换实例的重试次数
+    MaxAutoRetries: 1 #对当前实例的重试次数
+#ribbon:
+ # eureka:
+ #   enabled: false
