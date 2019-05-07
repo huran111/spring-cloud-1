@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: hr
+      label: master
+      profile: dev
+      uri: http://localhost:8086/ #config服务的地址
