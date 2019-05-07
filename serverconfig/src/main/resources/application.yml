@@ -1,0 +1,17 @@
+server:
+  port: 8086 #服务端口
+spring:
+  application:
+    name: hr-server-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huran111/hr-config-server.git
+      username: 1345122890@qq.com
+      password: hu13523221836
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
