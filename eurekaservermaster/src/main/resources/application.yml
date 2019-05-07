@@ -1,0 +1,16 @@
+server:
+  port: 7080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://huran:111111@127.0.0.1:8080/eureka/
+spring:
+  security:
+    user:
+      password: 111111
+      name: huran
+  application:
+    name: hu-eureka
