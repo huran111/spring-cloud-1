@@ -19,4 +19,6 @@ public class Item {
     private String pic;
     private String desc;
     private Long price;
+
+
 }
