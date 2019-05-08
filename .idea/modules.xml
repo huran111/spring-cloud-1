@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaservermaster/eurekaservermaster.iml" filepath="$PROJECT_DIR$/eurekaservermaster/eurekaservermaster.iml" />
       <module fileurl="file://$PROJECT_DIR$/hr-item/hr-item.iml" filepath="$PROJECT_DIR$/hr-item/hr-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/hr-order/hr-order.iml" filepath="$PROJECT_DIR$/hr-order/hr-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrgateway/hrgateway.iml" filepath="$PROJECT_DIR$/hrgateway/hrgateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hritemserver01/hritemserver01.iml" filepath="$PROJECT_DIR$/hritemserver01/hritemserver01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serverconfig/serverconfig.iml" filepath="$PROJECT_DIR$/serverconfig/serverconfig.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
     </modules>
   </component>

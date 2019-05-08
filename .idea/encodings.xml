@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/eurekaserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eurekaservermaster" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hr-item" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hr-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrgateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hritemserver01" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/serverconfig" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

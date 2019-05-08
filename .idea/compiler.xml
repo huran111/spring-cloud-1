@@ -6,13 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eurekaserver" />
+        <module name="eurekaservermaster" />
         <module name="hr-item" />
         <module name="hr-order" />
+        <module name="hrgateway" />
+        <module name="hritemserver01" />
+        <module name="serverconfig" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eureka-server" target="1.8" />
+      <module name="eurekaserver" target="1.8" />
+      <module name="eurekaservermaster" target="1.8" />
       <module name="hr-item" target="1.8" />
       <module name="hr-order" target="1.8" />
+      <module name="hrgateway" target="1.8" />
+      <module name="hritemserver01" target="1.8" />
+      <module name="serverconfig" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

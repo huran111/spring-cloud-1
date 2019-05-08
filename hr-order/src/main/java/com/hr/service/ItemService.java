@@ -1,6 +1,7 @@
 package com.hr.service;
 
 import com.hr.entity.Item;
+import com.hr.feign.ItemFeignClient;
 import com.hr.properties.OrderProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
@@ -27,7 +28,8 @@ public class ItemService {
     private OrderProperties orderProperties;
     @Autowired
     private DiscoveryClient discoveryClient;
-
+    @Autowired
+    private ItemFeignClient itemFeignClient;
     /**
      * 调用商品的微服务提供的接口进行查询数据
      *
@@ -60,14 +62,8 @@ public class ItemService {
             @HystrixProperty(name = "metrics.rollingStats.timeInMilliseconds", value = "1440")
     })
     public Item queryItemById(Long id) {
-      /*  List<ServiceInstance> list = this.discoveryClient.getInstances("HR-ITEM");
-        if (CollectionUtils.isEmpty(list)) {
-            return null;
-        }
-        ServiceInstance serviceInstance = list.get(0);
-        String url = serviceInstance.getHost() + ":" + serviceInstance.getPort();*/
-        //Ribbon如下
-        return this.restTemplate.getForObject("http://" + "HR-ITEM" + "/item/queryItemById/" + id, Item.class);
+       // return this.restTemplate.getForObject("http://" + "HR-ITEM" + "/item/queryItemById/" + id, Item.class);
+        return this.itemFeignClient.queryItemById(id);
     }
 
     public Item queryItemByIdFallBack(Long id) {

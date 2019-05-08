@@ -5,6 +5,11 @@
       <list>
         <option value="$PROJECT_DIR$/hr-item/pom.xml" />
         <option value="$PROJECT_DIR$/hr-order/pom.xml" />
+        <option value="$PROJECT_DIR$/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/eurekaservermaster/pom.xml" />
+        <option value="$PROJECT_DIR$/hritemserver01/pom.xml" />
+        <option value="$PROJECT_DIR$/hrgateway/pom.xml" />
+        <option value="$PROJECT_DIR$/serverconfig/pom.xml" />
       </list>
     </option>
   </component>
