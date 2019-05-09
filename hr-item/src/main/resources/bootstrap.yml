@@ -1,7 +1,14 @@
+eureka:
+ client:
+   service-url:
+     defaultZone: http://huran:111111@127.0.0.1:8080/eureka/
 spring:
   cloud:
     config:
       name: hr
       label: master
       profile: dev
-      uri: http://localhost:8086/ #config服务的地址
+      #uri: http://localhost:8086/ #config服务的地址  可以注册到eureka上
+      discovery:
+        enabled: true #啓用發現服務功能
+        service-id: hr-server-config
