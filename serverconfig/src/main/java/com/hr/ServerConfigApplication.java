@@ -14,6 +14,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * 开启配置服务
  */
+@EnableDiscoveryClient
 @EnableConfigServer
 @SpringBootApplication
 public class ServerConfigApplication {
