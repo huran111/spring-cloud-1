@@ -10,6 +10,11 @@ spring:
           uri: https://github.com/huran111/hr-config-server.git
       username: 1345122890@qq.com
       password: hu13523221836
+  rabbitmq:
+    password: guest
+    username: guest
+    virtual-host: /
+    host: localhost
 eureka:  #注册到Eureka上
   client:
     fetch-registry: true
