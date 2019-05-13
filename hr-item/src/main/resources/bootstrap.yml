@@ -12,3 +12,8 @@ spring:
       discovery:
         enabled: true #啓用發現服務功能
         service-id: hr-server-config
+  rabbitmq:
+    virtual-host: /
+    port: 5672
+    username: guest
+    password: guest
